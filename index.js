@@ -63,7 +63,7 @@ const ibratMongo = async () => {
         });
         // get all user inside website 
 
-        app.get('/products', jwtVirify, async (req, res) => {
+        app.get('/products', async (req, res) => {
             const data = await productsData.find({}).toArray();
             res.send(data);
         });
